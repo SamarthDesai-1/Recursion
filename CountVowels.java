@@ -3,14 +3,14 @@ import java.util.*;
 public class CountVowels {
 
     public static void main(String[] args) {
-        try (Scanner sc = new Scanner(System.in)) {     
+        try (Scanner sc = new Scanner(System.in)) {
             String str = "aeiou";
             int count = 0;
             int stop = 0;
             int ans = countVOWELS(str, count, stop);
-    
+
             System.out.println("Number of Vowels : " + ans);
-        } 
+        }
     }
 
     private static int countVOWELS(String str, int count, int stop) {
