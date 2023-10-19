@@ -17,7 +17,7 @@ public class GetSubsequence {
         }
         char ch = str.charAt(0);
         String ros = str.substring(1);
-        ArrayList<String> rres = getSSQ(ros);
+        ArrayList<String> rres = getSSQ(ros); 
 
         ArrayList<String> mres = new ArrayList<>();
 
