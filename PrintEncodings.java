@@ -1,7 +1,7 @@
 public class PrintEncodings {
 
     public static void main(String[] args) {
-        String number = "123";
+        String number = "12";
         String encodings = "";
 
         printECODINGS(number, encodings);
