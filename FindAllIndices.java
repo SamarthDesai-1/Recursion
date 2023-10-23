@@ -23,3 +23,4 @@ public class FindAllIndices {
         findINDICES(arr, idx + 1, key, ans);
     }
 }
+
