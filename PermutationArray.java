@@ -21,9 +21,11 @@ public class PermutationArray {
             return;
         }
         for (int j = idx; j < n; j++) {
+            System.out.println("Before Recursion Call " + j + " " + idx);
             swap(j, idx, nums);
             helper(nums, idx + 1, ans);
             swap(idx, j, nums);
+            System.out.println("After Recursion Call " + j + " " + idx);
         }
     }
 
