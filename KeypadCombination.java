@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class KeypadCombination {
 
     public static void main(String[] args) {
-        String number = "23";
+        String number = "2";
 
         ArrayList<String> result = getCOMB(number);
 
@@ -23,7 +23,7 @@ public class KeypadCombination {
 
         ArrayList<String> mres = new ArrayList<>();
 
-        String codeforch = array[ch - 48];
+        String codeforch = array[(ch - '0') - 1];
         for (int i = 0; i < codeforch.length(); i++) {
             for (String rstr : rres) {
                 char firstChar = codeforch.charAt(i);
@@ -33,6 +33,6 @@ public class KeypadCombination {
         return mres;
     }
 
-    public static String[] array = { ".;", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
+    public static String[] array = { ".;", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz" };
 
 }

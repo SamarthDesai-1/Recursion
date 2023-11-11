@@ -1,7 +1,7 @@
 public class PrintAllSubsequences {
 
     public static void main(String[] args) {
-        String x = "abc";
+        String x = "ahbgdc";
         String subsequences = "";
         printSSQ(x, subsequences);
     }

@@ -4,7 +4,7 @@ import java.util.List;
 public class GenerateParantheses {
     
     public static void main(String[] args) {
-        int n = 3;
+        int n = 2;
         List<String> result = new ArrayList<>();
         findAll("(" ,1,0,n,result);
         System.out.println(result);

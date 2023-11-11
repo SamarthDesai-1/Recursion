@@ -1,16 +1,20 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
-public class PermutationArray {
+public class Permutations2HashSet {
 
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3 };
-        List<List<Integer>> ans = new ArrayList<>();
-        helper(nums, 0, ans);
+        int[] arr = { 1, 1, 2 };
+        HashSet<List<Integer>> hs = new HashSet<>();
+
+        helper(arr, 0, hs);
+
+        List<List<Integer>> ans = new ArrayList<>(hs);
         System.out.println(ans);
     }
 
-    private static void helper(int[] nums, int idx, List<List<Integer>> ans) {
+    private static void helper(int[] nums, int idx, HashSet<List<Integer>> ans) {
         int n = nums.length;
         if (idx == n - 1) {
             List<Integer> l = new ArrayList<>();
@@ -21,11 +25,11 @@ public class PermutationArray {
             return;
         }
         for (int j = idx; j < n; j++) {
-            System.out.println("Before Recursion Call " + j + " " + idx);
+            if (j > idx && nums[j] == nums[j - 1])
+                continue;
             swap(j, idx, nums);
             helper(nums, idx + 1, ans);
             swap(idx, j, nums);
-            System.out.println("After Recursion Call " + j + " " + idx);
         }
     }
 
@@ -36,4 +40,3 @@ public class PermutationArray {
     }
 
 }
-4
