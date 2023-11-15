@@ -5,7 +5,7 @@ public class RemoveSpacesFromString {
     public static void main(String[] args) {
         try (Scanner foo = new Scanner(System.in)) {
             System.out.print("Enter String : ");
-            String x = foo.nextLine();
+            String x = foo.nextLi0ne();
             String newString = removeSPACES(x, 0);
             System.out.println(newString);
         }
