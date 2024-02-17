@@ -1,21 +1,22 @@
-public class TowerOfHanoi {
+import java.util.Scanner;
 
-    public static void main(String[] args) {
-        int disk = 3;
-        char t1 = 'A';
-        char t2 = 'B';
-        char t3 = 'C';
+public class TowerofHanoi {
 
-        toh(disk, t1, t2, t3);
-    }
+    static void move(int disk, char s, char h, char d) {
 
-    private static void toh(int disk, char t1, char t2, char t3) {
         if (disk == 0)
             return;
-
-        toh(disk - 1, t1, t3, t2); // source destination helper
-        System.out.println("[" + t1 + " -> " + t2 + "]");
-        toh(disk - 1, t3, t2, t1); // source destination helper
+        move(disk - 1, s, d, h);
+        System.out.println(s + " -> " + d);
+        move(disk - 1, h, s, d);
+        return;
     }
 
+    public static void main(String[] args) {
+        Scanner foo = new Scanner(System.in);
+        System.out.print("Enter Disks : ");
+        int disk = foo.nextInt();
+        move(disk, 'A', 'B', 'C');
+
+    }
 }

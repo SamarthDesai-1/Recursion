@@ -1,21 +1,13 @@
 public class CountDigits {
+    
+    public static int count(int n) {
+        if (n <= 0) return 0; 
 
-    public static void main(String[] args) {
-        int n = 452;
-
-        int count = countDIGIT(n);
-        System.out.println(count);
+        return 1 + count(n / 10);
     }
 
-    private static int countDIGIT(int n) {
-        int count = 0;
-        if (n == 0) {
-            return 0;
-        }
-
-        int lastDigit = n % 10;
-        count++;
-        return count + countDIGIT(n / 10);
-
+    public static void main(String[] args) {
+        int n = 2505741;
+        System.out.println(count(n));
     }
 }
